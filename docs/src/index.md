@@ -1,21 +1,18 @@
 ---
-title: 'Docs Starter'
-titleTemplate: 'Web Documentation Template'
+title: 'ERP Documentation'
+titleTemplate: 'ERP Documentation'
 
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "Docs Starter"
-  text: "Web Documentation Template"
-  tagline: My great project tagline
+  name: "Pointhub ERP"
+  text: "Documentation"
+  tagline: Elevating Standards, Empowering Success.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Getting Started
+      link: /features/getting-started
 
 features:
   - title: Feature A
