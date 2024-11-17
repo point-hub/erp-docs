@@ -1,6 +1,24 @@
 {
   "name": "docs-starter",
-  "type": "module",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.15.0",
+    "@point-hub/papp": "^0.0.79",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "bun-types": "latest",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "mermaid": "^11.4.0",
+    "prettier": "^3.3.3",
+    "vitepress": "^1.5.0",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vue": "^3.5.13"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
   "private": true,
   "scripts": {
     "docs:dev": "vitepress dev docs",
@@ -9,22 +27,5 @@
     "lint": "eslint",
     "lint:fix": "npm run lint -- --fix"
   },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.14.0",
-    "@typescript-eslint/eslint-plugin": "^8.13.0",
-    "@typescript-eslint/parser": "^8.13.0",
-    "bun-types": "latest",
-    "eslint": "^9.14.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "mermaid": "^11.4.0",
-    "prettier": "^3.3.3",
-    "vitepress": "^1.5.0",
-    "vitepress-plugin-mermaid": "^2.0.17",
-    "vue": "^3.5.12"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+  "type": "module"
 }

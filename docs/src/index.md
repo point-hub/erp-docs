@@ -15,11 +15,14 @@ hero:
       link: /features/getting-started
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Sitemap
+    details: List of pages for helps visualize the overall structure of the website
+    link: /sitemap
+  - title: Inventory Management
+    details: Streamlines inventory management and reporting across an organization
+    link: /inventory-management
+  - title: Accounting System
+    details: Streamlines financial management and reporting across an organization
+    link: /accounting-system
 ---
 

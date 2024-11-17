@@ -19,6 +19,7 @@ export default withMermaid({
     nav: nav(),
     sidebar: {
       '/features/': { base: '/features/', items: sidebarFeatures() },
+      '/features/purchasing/': { base: '/features/purchasing/', items: sidebarPurchasing() },
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/point-hub' }],
     search: {
@@ -43,7 +44,10 @@ function sidebarFeatures(): DefaultTheme.SidebarItem[] {
     {
       text: 'Introduction',
       collapsed: false,
-      items: [{ text: 'Getting Started', link: 'getting-started' }],
+      items: [
+        { text: 'Getting Started', link: 'getting-started' },
+        { text: 'Workflow', link: 'workflow' },
+      ],
     },
     {
       text: 'Essentials',
@@ -81,33 +85,29 @@ function sidebarFeatures(): DefaultTheme.SidebarItem[] {
       ],
     },
     {
-      text: 'Purchasing',
+      text: 'Purchase Order',
       collapsed: true,
       items: [
-        {
-          text: 'Purchase Request',
-          items: [
-            { text: 'About', link: 'purchasing/purchase-request/index' },
-            { text: 'Schema', link: 'purchasing/purchase-request' },
-            { text: 'Relationship', link: 'purchasing/purchase-request' },
-            { text: 'Create', link: 'purchasing/purchase-request' },
-            { text: 'Update', link: 'purchasing/purchase-request' },
-            { text: 'Delete', link: 'purchasing/purchase-request' },
-            { text: 'Approve', link: 'purchasing/purchase-request' },
-          ],
-        },
-        {
-          text: 'Purchase Order',
-          items: [
-            { text: 'Aboout', link: '/purchasing/purchase-request' },
-            { text: 'Schema', link: '/purchasing/purchase-request' },
-            { text: 'Relationship', link: '/purchasing/purchase-request' },
-            { text: 'Create', link: '/purchasing/purchase-request' },
-            { text: 'Update', link: '/purchasing/purchase-request' },
-            { text: 'Delete', link: '/purchasing/purchase-request' },
-            { text: 'Approve', link: '/purchasing/purchase-request' },
-          ],
-        },
+        { text: 'About', link: 'purchasing/purchase-order/about' },
+        { text: 'Schema', link: 'purchasing/purchase-order/schema' },
+        { text: 'Create', link: 'purchasing/purchase-order/create' },
+        { text: 'Retrieve', link: 'purchasing/purchase-order/retrieve' },
+        { text: 'Update', link: 'purchasing/purchase-order/update' },
+        { text: 'Delete', link: 'purchasing/purchase-order/delete' },
+        { text: 'Form Approval', link: 'purchasing/purchase-order/form-approval' },
+      ],
+    },
+    {
+      text: 'Purchase Receive',
+      collapsed: true,
+      items: [
+        { text: 'About', link: 'purchasing/purchase-receive/about' },
+        { text: 'Schema', link: 'purchasing/purchase-receive/schema' },
+        { text: 'Create', link: 'purchasing/purchase-receive/create' },
+        { text: 'Retrieve', link: 'purchasing/purchase-receive/retrieve' },
+        { text: 'Update', link: 'purchasing/purchase-receive/update' },
+        { text: 'Delete', link: 'purchasing/purchase-receive/delete' },
+        { text: 'Form Approval', link: 'purchasing/purchase-receive/form-approval' },
       ],
     },
     {
@@ -148,6 +148,58 @@ function sidebarFeatures(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Purchase Request', link: '' },
         { text: 'Purchase Order', link: '' },
+      ],
+    },
+  ]
+}
+
+function sidebarPurchasing(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Purchasing',
+      collapsed: false,
+      items: [{ text: 'Introduction', link: 'introduction' }],
+    },
+    {
+      text: 'Purchase Request',
+      collapsed: true,
+      items: [
+        { text: 'About', link: 'purchase-request/about' },
+        { text: 'Schema', link: 'purchase-request/schema' },
+        { text: 'Create', link: 'purchase-request/create' },
+        { text: 'Retrieve All', link: 'purchase-request/retrieve-all' },
+        { text: 'Retrieve', link: 'purchase-request/retrieve' },
+        { text: 'Update', link: 'purchase-request/update' },
+        { text: 'Delete', link: 'purchase-request/delete' },
+        { text: 'Form Approval', link: 'purchase-request/form-approval' },
+      ],
+    },
+    {
+      text: 'Purchase Order',
+      collapsed: true,
+      items: [
+        { text: 'About', link: 'purchase-order/about' },
+        { text: 'Schema', link: 'purchase-order/schema' },
+        { text: 'Create', link: 'purchase-order/create' },
+        { text: 'Retrieve All', link: 'purchase-order/retrieve-all' },
+        { text: 'Retrieve', link: 'purchase-order/retrieve' },
+        { text: 'Update', link: 'purchase-order/update' },
+        { text: 'Delete', link: 'purchase-order/delete' },
+        { text: 'Form Approval', link: 'purchase-order/form-approval' },
+      ],
+    },
+    {
+      text: 'Purchase Receive',
+      collapsed: true,
+      items: [
+        { text: 'About', link: 'purchasing/purchase-receive/about' },
+        { text: 'Schema', link: 'purchasing/purchase-receive/schema' },
+        { text: 'Create', link: 'purchasing/purchase-receive/create' },
+        { text: 'Retrieve All', link: 'purchasing/purchase-receive/retrieve-all' },
+        { text: 'Retrieve', link: 'purchasing/purchase-receive/retrieve' },
+        { text: 'Update', link: 'purchasing/purchase-receive/update' },
+        { text: 'Delete', link: 'purchasing/purchase-receive/delete' },
+        { text: 'Form Approval', link: 'purchasing/purchase-receive/form-approval' },
       ],
     },
   ]
