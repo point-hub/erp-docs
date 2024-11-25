@@ -8,11 +8,14 @@ layout: home
 hero:
   name: "Pointhub ERP"
   text: "Documentation"
-  tagline: Elevating Standards, Empowering Success.
+  tagline: Everything you need to know is right here.
   actions:
     - theme: brand
       text: Getting Started
-      link: /features/getting-started
+      link: /getting-started
+    - theme: alt
+      text: Software Stack
+      link: /getting-started
 
 features:
   - title: Sitemap
@@ -20,9 +23,9 @@ features:
     link: /sitemap
   - title: Inventory Management
     details: Streamlines inventory management and reporting across an organization
-    link: /inventory-management
+    link: /essentials/inventory-management
   - title: Accounting System
     details: Streamlines financial management and reporting across an organization
-    link: /accounting-system
+    link: /essentials/accounting-system
 ---
 
