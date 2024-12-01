@@ -14,8 +14,8 @@ hero:
       text: Getting Started
       link: /getting-started
     - theme: alt
-      text: Software Stack
-      link: /getting-started
+      text: Software & Tools
+      link: /software/introduction
 
 features:
   - title: Sitemap

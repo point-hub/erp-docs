@@ -18,7 +18,10 @@ export default withMermaid({
     logo: '/icon.png',
     nav: nav(),
     sidebar: {
-      '/': { base: '/', items: sidebarFeatures() },
+      '/': { base: '/', items: sidebarGuide() },
+      '/software/': { base: '/software/', items: sidebarSoftware() },
+      '/master/supplier/group/': { base: '/master/supplier/', items: sidebarSupplier() },
+      '/master/supplier/': { base: '/master/supplier/', items: sidebarSupplier() },
       '/purchasing/': { base: '/purchasing/', items: sidebarPurchasing() },
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/point-hub' }],
@@ -55,14 +58,14 @@ function nav(): DefaultTheme.NavItem[] {
         },
         {
           text: 'Libraries',
-          items: [{ text: 'Pointhub App', link: 'https://dev.pointhub.net/library/papp' }],
+          items: [{ text: 'UI Library', link: 'https://dev.pointhub.net/library/papp' }],
         },
       ],
     },
   ]
 }
 
-function sidebarFeatures(): DefaultTheme.SidebarItem[] {
+function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: 'Introduction',
@@ -88,13 +91,9 @@ function sidebarFeatures(): DefaultTheme.SidebarItem[] {
         { text: 'Warehouse', link: 'master/warehouse' },
         { text: 'Chart of Account', link: 'master/chart-of-account' },
         { text: 'Setting Journal', link: 'master/setting-journal' },
-        { text: 'Allocation Group', link: 'master/allocation-group' },
         { text: 'Allocation', link: 'master/allocation' },
-        { text: 'Supplier Group', link: 'master/supplier-group' },
-        { text: 'Supplier', link: 'master/supplier' },
-        { text: 'Customer Group', link: 'master/customer-group' },
+        { text: 'Supplier', link: 'master/supplier/about' },
         { text: 'Customer', link: 'master/customer' },
-        { text: 'Item Category', link: 'master/item-category' },
         { text: 'Item', link: 'master/item' },
       ],
     },
@@ -108,6 +107,74 @@ function sidebarFeatures(): DefaultTheme.SidebarItem[] {
         { text: 'Manufacture', link: 'manufacture' },
         { text: 'Inventory', link: 'inventory' },
         { text: 'Accounting', link: 'accounting' },
+      ],
+    },
+  ]
+}
+
+function sidebarSupplier(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Supplier Group',
+      collapsed: true,
+      items: [
+        { text: 'About', link: 'group/about' },
+        { text: 'Schema', link: 'group/schema' },
+        { text: 'Create', link: 'group/create' },
+        { text: 'Retrieve All', link: 'group/retrieve-all' },
+        { text: 'Retrieve', link: 'group/retrieve' },
+        { text: 'Update', link: 'group/update' },
+        { text: 'Delete', link: 'group/delete' },
+        { text: 'Form Approval', link: 'group/form-approval' },
+      ],
+    },
+    {
+      text: 'Supplier',
+      collapsed: true,
+      items: [
+        { text: 'About', link: 'about' },
+        { text: 'Schema', link: 'schema' },
+        { text: 'Create', link: 'create' },
+        { text: 'Retrieve All', link: 'retrieve-all' },
+        { text: 'Retrieve', link: 'retrieve' },
+        { text: 'Update', link: 'update' },
+        { text: 'Delete', link: 'delete' },
+        { text: 'Form Approval', link: 'form-approval' },
+      ],
+    },
+  ]
+}
+
+function sidebarSoftware(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Software & Tools',
+      collapsed: false,
+      items: [
+        { text: 'Introduction', link: 'introduction' },
+        { text: 'Text Editor', link: 'text-editor' },
+        { text: 'Programming Language', link: 'programming-language' },
+      ],
+    },
+    {
+      text: 'Backend',
+      collapsed: false,
+      items: [
+        { text: 'Node.js', link: 'backend/nodejs' },
+        { text: 'Bun', link: 'backend/bun' },
+        { text: 'Express.js', link: 'backend/expressjs' },
+        { text: 'MongoDB', link: 'backend/mongodb' },
+      ],
+    },
+    {
+      text: 'Frontend',
+      collapsed: false,
+      items: [
+        { text: 'Vite', link: 'frontend/vite' },
+        { text: 'Vue', link: 'frontend/vue' },
+        { text: 'Pinia', link: 'frontend/pinia' },
+        { text: 'Uno CSS', link: 'frontend/unocss' },
+        { text: 'Cypress', link: 'frontend/cypress' },
       ],
     },
   ]
